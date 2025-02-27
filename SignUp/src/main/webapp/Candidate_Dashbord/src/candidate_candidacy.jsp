@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -64,23 +67,11 @@
 
         <ul class="navbar-nav navbar-nav-right">
           <li class="nav-item nav-profile dropdown">
-            <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              <div class="nav-profile-img">
-                <img src="assets/images/faces-clipart/circle-france.jpg" alt="image">
-
-              </div>
-              <div class="nav-profile-text">
-                <p class="mb-1 text-black">Français</p>
-              </div>
-            </a>
-            <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
-              <a class="dropdown-item" href="#">
-                <i class=""></i> Français </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">
-                <i class=""></i> Anglais </a>
-            </div>
+          
+          
+            <div id="google_translate_element"></div>                                                                                                                                   
+            
+            
           </li>
           <li class="nav-item d-none d-lg-block full-screen-link">
             <a class="nav-link">
@@ -198,15 +189,16 @@
                                 <p class="comments"></p>
                               </div>
                               <div class="col-md-6">
-                                <label for="firstname">NationalitÃ©</label>
+                                <label for="firstname">Nationalité</label>
                                 <div class="input-group">
 
                                   <div class="rs-select2 js-select-simple select--no-search col-md-12">
                                     <select name="subject">
                                       <option disabled="disabled" selected="selected">Choose option</option>
                                       <option>Subject 1</option>
-                                      <option>Subject 2</option>
-                                      <option>Subject 3</option>
+                                      <option>Subject 1</option>
+							           <option>Subject 3</option>
+							          
                                     </select>
                                     <div class="select-dropdown"></div>
                                   </div>
@@ -265,7 +257,7 @@
                                 <p class="comments"></p>
                               </div>
                               <div class="col-md-6">
-                                <label for="email">Lieu de dÃ©pot du dossier </label>
+                                <label for="email">Lieu de dépot du dossier </label>
                                 <div class="input-group">
 
                                   <div class="rs-select2 js-select-simple select--no-search col-md-12">
@@ -397,7 +389,7 @@
                                     <div class="col-md-4">
                                       <label for="firstname">Document </label>
                                       <input id="firstname" type="text" name="firstname" class="form-control"
-                                        placeholder="Votre prÃ©nom">
+                                        placeholder="Votre prÃÂ©nom">
                                       <p class="comments"></p>
                                     </div>
                                     <div class="col-md-5">
@@ -521,6 +513,18 @@
   <script src="assets/vendors/chart.js/chart.umd.js"></script>
   <script src="assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
   <!-- End plugin js for this page -->
+  
+   <script src="../../assets_a/js/script.js"></script>
+     <script src="script.js"></script>
+      <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {pageLanguage: 'fr'},
+                'google_translate_element'
+            );
+        } 
+  </script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 
   <!-- dropdown script -->

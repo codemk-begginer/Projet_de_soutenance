@@ -44,24 +44,13 @@
           </button>
          
           <ul class="navbar-nav navbar-nav-right">
-          <li class="nav-item nav-profile dropdown">
-            <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              <div class="nav-profile-img">
-               <img src="assets_a/images/faces-clipart/circle-france.jpg" alt="image">
-
-              </div>
-              <div class="nav-profile-text">
-                <p class="mb-1 text-black">FranÃ§ais</p>
-              </div>
-            </a>
-            <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
-              <a class="dropdown-item" href="#">
-                <i class=""></i> FranÃ§ais </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">
-                <i class=""></i> Anglais </a>
-            </div>
+           <li class="nav-item nav-profile dropdown">
+            
+            
+            <div id="google_translate_element"></div> 
+            
+            
+            
           </li>
             <li class="nav-item nav-profile dropdown">
               <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
@@ -74,8 +63,8 @@
                 </div>
               </a>
               <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
-                <a class="dropdown-item" href="#">
-                  <i class="mdi mdi-cached me-2 text-success"></i> Activity Log </a>
+                <a class="dropdown-item" href="registration.jsp">
+                  <i class="mdi mdi-plus me-2 text-success"></i> Create An Account </a>
                 <div class="dropdown-divider"></div>
                  <a class="dropdown-item" href="Logout">
                   <i class="mdi mdi-logout me-2 text-primary"></i> Signout </a>
@@ -221,5 +210,29 @@
     <!-- endinject -->
     <!-- Custom js for this page -->
     <!-- End custom js for this page -->
+    
+     <script src="assets_a/js/script.js"></script>
+      <script type="text/javascript">
+      function hideGoogleTranslatePopup() {
+    	    const css = `
+    	        .goog-te-banner-frame { display: none !important; }
+    	        body { top: 0px !important; }
+    	    `;
+    	    const style = document.createElement("style");
+    	    style.innerHTML = css;
+    	    document.head.appendChild(style);
+    	}
+
+    	// Charge Google Translate sans la bannière :
+    	function googleTranslateElementInit() {
+    	    new google.translate.TranslateElement({
+    	        pageLanguage: 'en',
+    	        autoDisplay: false // Désactive l'affichage automatique du pop-up
+    	    }, 'google_translate_element');
+    	    hideGoogleTranslatePopup();
+    	}
+  </script>
+  
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   </body>
 </html>
